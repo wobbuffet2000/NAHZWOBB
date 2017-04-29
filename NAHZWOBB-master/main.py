@@ -18,6 +18,9 @@ def loop(number=None):
     boo = (number == None)
     return render_template('loop.html',num=number,boo=boo)
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
