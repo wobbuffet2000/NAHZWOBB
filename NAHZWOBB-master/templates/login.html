@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="keywords" content="Stuff, useless">
 <meta name="description" content="how to be useless">
     <head type="CSS/style">
         <title>This is a try out</title>
         <style type="text/css">
-          body {background-color:orange;
+          body {background-color:black;
           }
           ul {list-style-type:none;
               overflow: hidden;
@@ -38,7 +37,7 @@
           #top {text-align:center;
               color:white;
               font-size:100px;
-              background-color:#ff9933;
+              background-color:black;
               border:15px double white;
               margin:20px;
 
@@ -46,21 +45,45 @@
            div {background-color:white;
                 color:black;
                 margin:20px;
+                float:right;
                 }
+            legend {
+                    padding:20px;
+                    }
+            #submit {color:white;
+                    background-color:black;
+                    padding-top:15px;
+                    padding-bottom:15px;
+                    padding-left:10px;
+                    padding-right:10px;
+                    margin:20px
+                    text-align:mid;
+
+                    }
         </style>
     </head>
     <body>
-        <h1 id="top">Welcome to </h1>
+        <h1 id="top"> ArcadeGo</h1>
         <hr/>
         <ul>
             <li><a href="../home">Home</a></li>
-            <li><a href="../tools">Tools</a></li>
-            <li><a href="../stuff">Stuff</a></li>
+            <li><a href="../login">Login</a></li>
             <li><a href="../about">About</a></li>
         </ul>
         <div>
-            <pre>
-               <h1>Purpose of the website</h1>
-            </pre>
+            <form action="/action_page.php" post>
+                <fieldset>
+                    <legend><h1>Information</h1></legend>
+                    First name:<br><input type="text" name="first"><br><br>
+                    Last name:<br><input type="text" name="last"><br><br>
+                    Gender:<input type="radio" name="male">Male<input type="radio" name="female">Female<br><br>
+                    Birthday:<br><input type="date" name="birth"><br><br>
+                    ID:<br><input type="text" name="id"><br><br>
+                    Password:<br><input type="password" name="pass"><br><br>
+                </fieldset>
+                    <input type="submit" name="submit" id="submit">
+            </form>
         </div>
     </body>
+
+</html>
