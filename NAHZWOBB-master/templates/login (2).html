@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="keywords" content="Stuff, useless">
+<meta name="description" content="how to be useless">
+    <head type="CSS/style">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <title>This is a try out</title>
+        <style type="text/css">
+        .mySlides {display:none;}
+          body {background-color:black;
+          }
+          ul {list-style-type:none;
+              overflow: hidden;
+              background-color: #333333;
+              margin-left:20px;
+              margin-right:20px;
+              padding: 0;}
+           li {float:left}
+          li a {display:block;
+                color:white
+                background-color:#111111;
+                text-align:center;
+                text-decoration:none;
+                padding-top:16px;
+                padding-bottom:16px;
+                padding-left:30px;
+                padding-right:30px;
+
+           }
+
+          a:link {color:white;}
+          li a:hover {color:yellow;}
+          a:active {color:red;}
+          a {color:white;
+             font-size:30px;
+
+             }
+          #top {text-align:center;
+              color:white;
+              font-size:100px;
+              background-color:black;
+              border:15px double white;
+              margin:20px;
+
+              }
+           #form {background-color:white;
+                color:black;
+                margin:20px;
+                float:left;
+                padding:20px;
+                }
+
+           #slide{
+                color:black;
+                margin:20px;
+                float:left;
+                padding:20px;
+                }
+            legend {
+                    padding:20px;
+                    }
+            #submit,#but {color:white;
+                    background-color:black;
+                    padding-top:15px;
+                    padding-bottom:15px;
+                    padding-left:10px;
+                    padding-right:10px;
+                    margin:20px
+                    text-align:mid;
+                    float:right;
+            
+                    }
+             #form {float:right;
+                    }
+        </style>
+    </head>
+    <body>
+        <h1 id="top"> ArcadeGo</h1>
+        <hr/>
+        <ul>
+            <li><a href="../home">Home</a></li>
+            <li><a href="../login">Login</a></li>
+            <li><a href="../about">About</a></li>
+        </ul>
+        <div class="w3-content w3-section" style="max-width:500px" id="slide">
+            <img class="mySlides w3-animate-top" src="metal.jpg" style="width:300%">
+             <img class="mySlides w3-animate-bottom" src="pacman.png" style="width:280%">
+             <img class="mySlides w3-animate-top" src="streetfighter.png" style="width:300%">
+        </div>
+        <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+         for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+         }
+         myIndex++;
+         if (myIndex > x.length) {myIndex = 1}
+         x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 2500);
+        }
+</script>
+        <div id="form">
+            <form action="/action_page.php" post>
+                <fieldset>
+                    <legend><h1>Information</h1></legend>
+                    First name:<br><input type="text" name="first"><br><br>
+                    Last name:<br><input type="text" name="last"><br><br>
+                    Gender:<input type="radio" name="male">Male<input type="radio" name="female">Female<br><br>
+                    Birthday:<br><input type="date" name="birth"><br><br>
+                    ID:<br><input type="text" name="id"><br><br>
+                    Password:<br><input type="password" name="pass"><br><br>
+                </fieldset>
+                    <input type="submit" name="submit" id="submit">
+                <a href="Login.html"><button id="but"><font size="4">Login</font></button></a>
+            </form>
+        </div>
+    </body>
+
+</html>
